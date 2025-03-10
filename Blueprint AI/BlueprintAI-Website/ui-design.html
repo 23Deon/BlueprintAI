@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueprintAI - UI Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="ui-design.html">UI Design</a>
+            <a href="system-design.html">System Design</a>
+            <a href="implementation.html">Implementation</a>
+            <a href="testing.html">Testing</a>
+            <a href="evaluation.html">Evaluation</a>
+            <a href="appendices.html">Appendices</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- UI Design Overview -->
+        <section>
+            <h2>UI Design Overview</h2>
+            <p>
+                Given that our project is targeted to a wide range of users, from programmers to designers — all with
+                different levels of experience — we designed a UI that caters to these groups.
+                A careful balance was considered to create a UI that allows experienced designers ample avenues for
+                customization while keeping it intuitive for general users.
+            </p>
+            <p>
+                We referenced **popular design products** such as Wix and Canva, using **Jakob Nielsen’s 10 Usability
+                Heuristics** to guide our design process.
+            </p>
+        </section>
+
+        <!-- Design Principles -->
+        <section>
+            <h2>Design Principles</h2>
+            <p>We followed several key usability principles to ensure an optimal user experience:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Design Feature</th>
+                        <th>Usability Heuristic</th>
+                        <th>Implementation in BlueprintAI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Customization Sidebar</td>
+                        <td>Recognition rather than recall</td>
+                        <td>All fields and labels are clearly visible and well-labeled for easy access.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Flexibility and efficiency of use</td>
+                        <td>Users can upload company logos, drawings, and other assets for customization.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Aesthetic and minimalist design</td>
+                        <td>Only relevant information is displayed in the sidebar to maintain clarity.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Additionally, we took inspiration from Wix and Canva’s **top bar design**, which contains crucial
+                project-level controls.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Design Feature</th>
+                        <th>Usability Heuristic</th>
+                        <th>Implementation in BlueprintAI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project-Level Top Bar</td>
+                        <td>Visibility of system status</td>
+                        <td>Flags notify users when they are in editing mode and when work is saved.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Match between system and real world</td>
+                        <td>Familiar icons such as undo, redo, and download buttons ensure usability.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>User-controlled freedom</td>
+                        <td>Clearly marked undo/redo and exit buttons provide intuitive navigation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- AI Integration in UI -->
+        <section>
+            <h2>AI Integration in UI</h2>
+            <p>
+                Unlike traditional UI builders, **BlueprintAI deeply integrates AI** into the interface design process.
+                Instead of relegating AI to the corner (as seen in Wix/Canva), our **AI Chatbox System** is
+                **prominently featured** while maintaining easy-to-use customization features.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Design Feature</th>
+                        <th>Usability Heuristic</th>
+                        <th>Implementation in BlueprintAI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AI Chatbox</td>
+                        <td>Error prevention</td>
+                        <td>Logs prompts and tracks UI changes, allowing for rollbacks.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Help users recognize and recover from errors</td>
+                        <td>AI highlights overflowing elements and potential UI conflicts.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Help and documentation</td>
+                        <td>Chatbox allows easy search and retrieval of features via AI queries.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sketches -->
+        <section>
+            <h2>Sketches</h2>
+            <p>
+                We created several hand-drawn **sketches** in the early stages of the project, allowing for rapid
+                iteration based on user feedback.
+            </p>
+
+            <h3>Design A</h3>
+            <p>
+                **AI prompter positioned on the side** with a **portrait chat log**. This design was inspired by
+                chatbot-style UIs such as ChatGPT.
+            </p>
+            <img src="designA.png" alt="Design A Sketch">
+
+            <h3>Design B</h3>
+            <p>
+                **AI prompter positioned at the bottom**, and chat history accessed through a button.
+            </p>
+            <img src="designB.png" alt="Design B Sketch">
+
+            <h3>Final Decision</h3>
+            <p>
+                Users preferred **Design A**, as it provided clearer AI responses while showing UI changes in real time.
+                Improvements included:
+            </p>
+            <ul>
+                <li>Adding a **confirmation button** for AI-generated changes.</li>
+                <li>Keeping **all essential buttons** (download, pages, widgets) on one side for **better
+                    organization**.</li>
+                <li>Adding a **search bar** for improved usability.</li>
+            </ul>
+
+            <h3>Refined Sketch</h3>
+            <img src="final-sketch.png" alt="Final Refined Sketch">
+        </section>
+
+        <!-- Wireframe Prototype -->
+        <section>
+            <h2>Wireframe Prototype</h2>
+            <p>
+                Based on the refined sketches, we developed a **high-fidelity wireframe** that allowed us to visualize
+                and finalize the UI layout.
+            </p>
+            <p><strong>View the Interactive Prototype:</strong> <a href="INSERT_FIGMA_URL_HERE" target="_blank">Click
+                    here to open in Figma</a></p>
+        </section>
+
+        <!-- Evaluation -->
+        <section>
+            <h2>Evaluation of Prototype</h2>
+            <p>
+                A heuristic evaluation based on **Nielsen’s Usability Principles** guided the refinement of our UI.
+            </p>
+            <p>Severity Ratings:</p>
+            <ul>
+                <li><strong>0:</strong> Not a usability problem</li>
+                <li><strong>1:</strong> Cosmetic problem (low priority)</li>
+                <li><strong>2:</strong> Minor usability issue (fix if time permits)</li>
+                <li><strong>3:</strong> Major usability issue (high priority)</li>
+                <li><strong>4:</strong> Critical usability issue (must be fixed before launch)</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

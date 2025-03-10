@@ -1,0 +1,214 @@
+/* Global styling for all pages */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #003366;
+    font-size: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+    /* Prevents content from leaking outside the screen */
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #003366;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* Ensures content doesn't overflow on smaller screens */
+}
+
+.navbar-logo {
+    margin-right: 100px;
+
+}
+
+/* Navigation links hover effect */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+/* Title and Logo Section */
+.title-logo-section {
+    display: flex;
+    flex-direction: row;
+    /* Aligns title and logo horizontally */
+    align-items: left;
+    justify-content: left;
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Title styling */
+.title-logo-section h1 {
+    font-size: 8rem;
+    /* Increased title size */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    white-space: nowrap;
+    /* Prevents breaking */
+    max-width: 90vw;
+    /* Ensures text does not exceed viewport width */
+}
+
+/* Logo styling */
+.title-logo-section .logo {
+    width: 100px;
+    /* Adjusted size */
+    height: auto;
+    margin-left: 500px;
+    /* Adds space between title and logo */
+}
+
+/* Slogan styling */
+.slogan {
+    color: rgb(134, 132, 132);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 30px;
+}
+
+/* Content Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin-bottom: 20px;
+    background: transparent;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Headings */
+h2 {
+    color: #004080;
+}
+
+h3,
+h4 {
+    color: #ffffff;
+}
+
+/* Responsive Fixes for Small Screens */
+@media (max-width: 1024px) {
+    .title-logo-section {
+        flex-direction: column;
+        /* Stack title and logo on smaller screens */
+        text-align: center;
+    }
+
+    .title-logo-section h1 {
+        font-size: 5rem;
+        max-width: 85vw;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-logo-section h1 {
+        font-size: 4rem;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 480px) {
+    .title-logo-section h1 {
+        font-size: 3rem;
+        max-width: 80vw;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    section {
+        width: 98%;
+        padding: 10px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 1.2rem;
+    }
+}
