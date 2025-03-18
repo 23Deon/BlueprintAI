@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #003366;
-    font-size: 18px;
+    font-size: 24px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,36 @@ body {
     overflow-x: hidden;
     /* Prevents content from leaking outside the screen */
     box-sizing: border-box;
+}
+
+/* Smooth Page Transition */
+.page-transition {
+    opacity: 0;
+    transition: opacity 20s ease-in-out;
+}
+
+/* When the page is fully loaded */
+.page-transition.loaded {
+    opacity: 1;
+}
+
+/* Fade Out Effect when navigating away */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    /* Adjusted to 1.5s */
+}
+
+/* When elements are visible, they slide in */
+.slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Header styling */
@@ -46,7 +76,8 @@ nav {
 
 .navbar-logo {
     margin-right: 100px;
-
+    max-width: 90vw;
+    align-items: left;
 }
 
 /* Navigation links hover effect */
@@ -101,17 +132,20 @@ nav a:hover {
 
 /* Slogan styling */
 .slogan {
-    color: rgb(134, 132, 132);
+    color: rgb(185, 181, 181);
     font-size: 18px;
     font-weight: bold;
     text-align: left;
     margin-left: 30px;
 }
 
+
 /* Content Container */
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    /* Make it take 90% of the viewport width */
+    max-width: 1600px;
+    /* Increase max-width for a wider body */
     margin: 0 auto;
     padding: 20px;
     flex-grow: 1;
@@ -124,11 +158,14 @@ section {
     margin-bottom: 20px;
     background: transparent;
     border-radius: 10px;
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    /* Fix incorrect width */
+    max-width: 1400px;
+    /* Increase section width */
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    align-self: center;
 }
 
 /* Headings */
@@ -139,6 +176,32 @@ h2 {
 h3,
 h4 {
     color: #ffffff;
+}
+
+/* ✅ Slide-In Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hidden sections */
+.slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When elements are visible, they slide in */
+.slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Fixes for Small Screens */
