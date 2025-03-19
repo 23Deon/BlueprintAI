@@ -1,55 +1,62 @@
-/* Global styling for all pages */
+/* =================== Global Styles =================== */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #003366;
+    color: #181f34;
     font-size: 24px;
     height: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     overflow-x: hidden;
-    /* Prevents content from leaking outside the screen */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures consistent sizing */
 }
 
-/* Smooth Page Transition */
+/* =================== Smooth Page Transitions =================== */
 .page-transition {
     opacity: 0;
-    transition: opacity 20s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
-/* When the page is fully loaded */
 .page-transition.loaded {
     opacity: 1;
 }
 
-/* Fade Out Effect when navigating away */
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
+/* =================== Animations =================== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .slide-in {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    /* Adjusted to 1.5s */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* When elements are visible, they slide in */
 .slide-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Header styling */
+/* =================== Header & Navigation =================== */
 header {
-    background-color: #003366;
+    background-color: #181f34;
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     font-size: 26px;
     font-weight: bold;
@@ -62,8 +69,8 @@ header {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: center;
-    background-color: #003366;
+    justify-content: right;
+    background-color: #181f34;
     padding: 15px;
     position: sticky;
     top: 0;
@@ -71,16 +78,20 @@ nav {
     width: 100%;
     box-sizing: border-box;
     flex-wrap: wrap;
-    /* Ensures content doesn't overflow on smaller screens */
 }
 
+/* Navbar Logo */
 .navbar-logo {
-    margin-right: 100px;
-    max-width: 90vw;
-    align-items: left;
+    position: absolute;
+    top: 10px;
+    left: 0; /* Moves it fully to the left */
+    width: 150px; /* Increase size */
+    height: auto;
+    max-width: 20vw; /* Adjust scaling */
 }
 
-/* Navigation links hover effect */
+
+/* Navigation Links */
 nav a {
     color: white;
     text-decoration: none;
@@ -90,47 +101,41 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #004080;
+    background-color: #181f34;
     border-radius: 5px;
 }
 
-/* Title and Logo Section */
+/* =================== Title and Logo Section =================== */
 .title-logo-section {
     display: flex;
     flex-direction: row;
-    /* Aligns title and logo horizontally */
     align-items: left;
     justify-content: left;
     margin-top: 30px;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
+    height: 400px;
     box-sizing: border-box;
 }
 
-/* Title styling */
+
 .title-logo-section h1 {
     font-size: 8rem;
-    /* Increased title size */
     color: #ffffff;
     margin: 0;
     padding: 0;
     text-align: left;
     white-space: nowrap;
-    /* Prevents breaking */
     max-width: 90vw;
-    /* Ensures text does not exceed viewport width */
 }
 
-/* Logo styling */
 .title-logo-section .logo {
-    width: 100px;
-    /* Adjusted size */
-    height: auto;
-    margin-left: 500px;
-    /* Adds space between title and logo */
+    width: 33%; /* Increase size */
+    height: 200px;
+    margin-left: 300px; /* Adjust left spacing */
 }
 
-/* Slogan styling */
+/* =================== Slogan =================== */
 .slogan {
     color: rgb(185, 181, 181);
     font-size: 18px;
@@ -139,76 +144,118 @@ nav a:hover {
     margin-left: 30px;
 }
 
-
-/* Content Container */
+/* =================== Main Content =================== */
 .container {
     width: 90%;
-    /* Make it take 90% of the viewport width */
     max-width: 1600px;
-    /* Increase max-width for a wider body */
     margin: 0 auto;
     padding: 20px;
     flex-grow: 1;
     box-sizing: border-box;
 }
 
-/* Section Styling */
 section {
     padding: 40px;
     margin-bottom: 20px;
     background: transparent;
     border-radius: 10px;
     width: 100%;
-    /* Fix incorrect width */
     max-width: 1400px;
-    /* Increase section width */
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
     align-self: center;
 }
-
-/* Headings */
-h2 {
-    color: #004080;
+/* Hero Section - Title & Logo */
+.hero-section {
+    display: flex;
+    flex-direction: row; /* Ensures the text and logo are on the same row */
+    align-items: center;
+    justify-content: center; /* Centers both the text and logo */
+    background-color: #181f34;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 20px auto;
+    position: relative;
 }
 
-h3,
-h4 {
+/* Title styling */
+.hero-text h1 {
+    font-size: 6rem;
+    margin: 0;
+    text-align: center;  /* Center the title */
+}
+
+/* Slogan styling */
+.hero-text .slogan {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: center; /* Ensure slogan is also centered */
+}
+
+/* Logo styling */
+.hero-logo {
+    width: 33%; /* 1/3 of the screen width */
+    max-width: 400px; /* Optional: Max limit for larger screens */
+    height: auto;
+    object-fit: contain;
+    margin-left: 20px; /* Space between the logo and the text */
+    animation: bounce 2s ease-in-out infinite; /* Apply the bounce animation with smooth easing */
+}
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }   
+    50% {
+        transform: translateY(-15px); /* Return to start position */
+    }
+
+}
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-logo {
+        max-width: 60%;
+        margin-top: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-logo {
+        max-width: 70%;
+    }
+}
+
+/* =================== Headings =================== */
+h2 {
+    color: #9eb7c6;
+}
+
+h3, h4 {
     color: #ffffff;
 }
 
-/* ✅ Slide-In Animation */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
+/* =================== Responsive Design =================== */
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Initially hidden sections */
-.slide-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* When elements are visible, they slide in */
-.slide-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Fixes for Small Screens */
+/* Large Tablets & Small Laptops */
 @media (max-width: 1024px) {
     .title-logo-section {
         flex-direction: column;
-        /* Stack title and logo on smaller screens */
         text-align: center;
     }
 
@@ -217,18 +264,23 @@ h4 {
         max-width: 85vw;
     }
 
-    .logo {
+    .title-logo-section .logo {
         margin-left: 0;
         margin-top: 10px;
     }
+
+    .navbar-logo {
+        width: 100px;
+    }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
     .title-logo-section h1 {
         font-size: 4rem;
     }
 
-    .logo {
+    .title-logo-section .logo {
         width: 80px;
     }
 
@@ -251,9 +303,13 @@ h4 {
         width: 100%;
         padding: 10px;
     }
+
+    .navbar-logo {
+        width: 80px;
+    }
 }
 
-/* Extra small screens (Phones) */
+/* Mobile Phones */
 @media (max-width: 480px) {
     .title-logo-section h1 {
         font-size: 3rem;
@@ -269,9 +325,191 @@ h4 {
         padding: 10px;
     }
 
-    h2,
-    h3,
-    h4 {
+    h2, h3, h4 {
         font-size: 1.2rem;
     }
+
+    .navbar-logo {
+        width: 60px;
+    }
 }
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.video-section video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #181f34;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.quote-section {
+    background-color: #181f34; /* Dark Blue Background */
+    color: white;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Soft Shadow */
+}
+
+.quote-section blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quote-section span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    color: #9eb7c6;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #181f34;
+    font-size: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0073b1; /* LinkedIn blue */
+    transform: scale(1.2);
+}
+
+
+
+/* Gantt Chart */
+.project-management {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.project-management img {
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Footer section */
+footer {
+    background-color: #181f34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ff7f00; /* Optional hover color */
+}
+
+/* Footer logos styling */
+.footer-logos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the logos */
+}
+
+.footer-logo {
+    width: 100px; /* Set width for logos */
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-logo:hover {
+    opacity: 0.7; /* Optional hover effect */
+}
+
+/* General styling for the body and layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+

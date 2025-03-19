@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueprintAI - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -13,9 +14,7 @@
     <header>
         <!-- Navigation Bar -->
         <nav>
-            <!-- Image Placeholder -->
-            <img src="BLUEPRINT_TITLE.png" alt="Logo Placeholder" class="navbar-logo">
-
+            <img src="logoText.png" alt="BlueprintAI Logo" class="navbar-logo">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
             <a href="ui-design.html">UI Design</a>
@@ -26,60 +25,129 @@
             <a href="appendices.html">Appendices</a>
         </nav>
 
-        <!-- Title and Logo Section -->
-        <div class="title-logo-section slide-in">
-
-            <h1>BlueprintAI</h1>
-            <img src="PLACEHOLDER.jpg" alt="BlueprintAI Logo" class="logo">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-text">
+                <h3>TEAM 21</h3>
+                <p class="description"> Empowering developers with AI-driven UI design</p>
+            </div> 
+            <img src="logo.png" alt="BlueprintAI Logo" class="hero-logo">
         </div>
-
-        <!-- Slogan -->
-        <p class="slogan slide-in">Keep the frontend at the backend of your mind</p>
     </header>
 
-    <div class="container slide-in">
-        <!-- Welcome Section -->
-        <section>
-            <h2>Welcome to BlueprintAI</h2>
-            <p>BlueprintAI is an AI-driven UI generation tool seamlessly integrated as a VSCode extension.</p>
+    <div class="container">
+        <!-- Abstract Section -->
+        <section id="abstract" class="abstract">
+            <h2>Problem Statement</h2>
+            <p>Front-end development is often a bottleneck in software projects, requiring extensive knowledge of HTML, CSS, JavaScript, and UI/UX design principles. Developers spend significant time manually coding interfaces, which slows down productivity, especially in hackathons, rapid prototyping, and agile development environments.</p>
+
+            <h2>Our Solution</h2>
+            <p>BlueprintAI is a <strong>VSCode extension that leverages AI to automate front-end UI design</strong>. Users can generate layouts by <strong>uploading screenshots</strong>, <strong>providing sketches</strong>, or <strong>describing their ideas</strong> in natural language. The AI seamlessly converts these inputs into structured UI components using CraftJS, enabling real-time editing without the need for code.</p>  
+
+            <p>BlueprintAI streamlines front-end development by reducing manual effort, ensuring design consistency, and accelerating project timelines. It democratizes UI design, making professional-grade interfaces accessible to both developers and non-coders, ultimately bridging the gap between creativity and implementation.</p>
         </section>
 
-        <!-- Abstract Section -->
-        <section>
-            <h2>Abstract</h2>
-            <p>
-                The ability to design front-end user interfaces has traditionally been reserved for those with coding
-                expertise, requiring knowledge of HTML, CSS, JavaScript, and UI/UX principles. However, the advent of
-                <strong>Generative AI</strong> has revolutionized this space, enabling both technical and non-technical
-                users to create intuitive, aesthetically pleasing web interfaces effortlessly.
-            </p>
-            <p>
-                <strong>BlueprintAI</strong> is a cutting-edge <em>generative drag-and-drop AI</em> tool that empowers
-                users to build front-end designs without writing a single line of code. By integrating <strong>machine
-                    learning models</strong> with an <strong>interactive UI builder</strong>, BlueprintAI offers
-                <em>real-time component generation</em>, <em>intelligent design recommendations</em>, and <em>adaptive
-                    customization</em> to streamline the UI development process.
-            </p>
-            <p>
-                Users can describe their design intentions in <strong>natural language</strong>, and BlueprintAI
-                translates these prompts into <strong>ready-to-use UI components</strong> that can be edited, resized,
-                and positioned using an intuitive <em>drag-and-drop editor</em>. Advanced AI capabilities ensure that
-                every generated layout maintains <strong>responsive design</strong>, <strong>visual
-                    consistency</strong>, and <strong>industry-standard UI/UX best practices</strong>.
-            </p>
-            <p>
-                BlueprintAI is <strong>ideal for developers, designers, and businesses</strong> looking to create
-                professional interfaces quickly. By reducing reliance on manual coding and bridging the gap between
-                <em>design thinking</em> and <em>technical execution</em>, BlueprintAI accelerates front-end
-                development, making website and app design more accessible than ever before.
-            </p>
-            <p>
-                With AI-driven <strong>context-aware UI generation</strong>, <strong>seamless export options</strong>,
-                and <strong>real-time collaboration features</strong>, BlueprintAI redefines front-end design, making it
-                <strong>faster, smarter, and more inclusive</strong>.
-            </p>
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                “If this was available now, I would use it.”
+                <span>- Prof. Joseph Connor, UCL Dept of Computer Science</span>
+            </blockquote>
+        </section>        
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <p>BlueprintAI offers a wide range of features that empower developers and designers to work smarter, not harder, demonstrated by our interactive wireframe: </p>
+            <ul>
+            </ul>
+        </section>
+
+        <!-- Project Video Section -->
+        <section id="video" class="video-section">
+            <h2>Project Video</h2>
+            <video controls>
+                <source src="project-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Project Management Section -->
+        <section id="timeline" class="project-management">
+            <h2>Project Timeline</h2>
+            <p>The Gantt chart below illustrates the key milestones and deadlines for each phase of the project to enable effective collaboration between our team.</p>
+            <img src="gantt-chart.png" alt="Gantt Chart">
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="ourteam" class="our-team">
+            <h2>Meet Team 21</h2>
+            <div class="team-container">
+                <!-- Team Member 1: Gideon -->
+                <div class="team-member">
+                    <img src="gideon.jpeg" alt="Gideon">
+                    <h3>Gideon Zeru</h3>
+                    <p>Programmer | Report Editor | Tester</p>
+                    <p>2nd Year BSc CS Student</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/23Deon" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gideon-zeru-28b3b323a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2: Josh -->
+                <div class="team-member">
+                    <img src="josh.jpg" alt="Josh">
+                    <h3>Joshua Mendel</h3>
+                    <p>2nd Year BSc CS Student</p>
+                    <p>Programmer | Client Liaison | Tester</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/23Deon" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/joshua-mendel-6ab22a185/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3: Joshua Ian Soh -->
+                <div class="team-member">
+                    <img src="joshua.JPG" alt="Joshua">
+                    <h3>Joshua Ian Soh</h3>
+                    <p>2nd Year BSc CS Student</p>
+                    <p>Programmer | UI Design | Researcher</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/jay5oh33rn" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/joshua-soh-4a507533b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4: Simran -->
+                <div class="team-member">
+                    <img src="simran.jpg" alt="Simran">
+                    <h3>Simran Goel</h3>
+                    <p>2nd Year MEng CS Student</p>
+                    <p>Programmer | Researcher | Report Editor</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/simrangoel0" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/simran-goel00/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Logos -->
+        <div class="footer-logos">
+            <a href="https://www.ucl.ac.uk" target="_blank">
+                <img src="ucl.png" alt="UCL Logo" class="footer-logo">
+            </a>
+            <a href="https://www.microsoft.com" target="_blank">
+                <img src="microsoft.png" alt="Microsoft Logo" class="footer-logo">
+            </a>
+            <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+    </footer>
+
 
     <script src="script.js"></script>
 </body>
