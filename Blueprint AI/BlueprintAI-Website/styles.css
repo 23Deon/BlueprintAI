@@ -1,6 +1,6 @@
 /* =================== Global Styles =================== */
 body {
-    font-family: Verdana, sans-serif;
+    font-family: Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -66,10 +66,8 @@ header {
     box-sizing: border-box;
 }
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: right;
+/* Navigation Bar – Using Bootstrap’s .navbar */
+.navbar {
     background-color: #181f34;
     padding: 15px;
     position: sticky;
@@ -77,7 +75,6 @@ nav {
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
-    flex-wrap: wrap;
 }
 
 /* Navbar Logo */
@@ -90,9 +87,8 @@ nav {
     max-width: 20vw; /* Adjust scaling */
 }
 
-
-/* Navigation Links */
-nav a {
+/* Existing nav link styling */
+.navbar-nav .nav-link {
     color: white;
     text-decoration: none;
     padding: 12px 20px;
@@ -100,24 +96,48 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+.navbar-nav .nav-link:hover {
     background-color: #181f34;
     border-radius: 5px;
+}
+
+/* New rule for the active nav link */
+.navbar-nav .nav-link.active {
+    color: #9eb7c6;
+}
+/* === Appendices Page Title & Subtitle === */
+/* 1) Target any H1 that has the .my-5 class. */
+h1.my-5 {
+    text-align: left;     /* Shift title to the left */
+    color: #9eb7c6;     /* Make title light blue */
+    font-weight: bold;    /* Make title bold */
+    margin-left: 25px; 
+}
+
+/* 2) Target the paragraph immediately following that H1. */
+h1.my-5 + p {
+    text-align: left;     /* Shift subtitle to the left */
+    color: rgb(219, 222, 230);         /* Make subtitle text white */
+    margin-left: 25px; 
+    /* make text samller*/
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -20px;
+
 }
 
 /* =================== Title and Logo Section =================== */
 .title-logo-section {
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 30px;
     padding: 10px;
     width: 100%;
     height: 400px;
     box-sizing: border-box;
 }
-
 
 .title-logo-section h1 {
     font-size: 8rem;
@@ -137,7 +157,7 @@ nav a:hover {
 
 /* =================== Slogan =================== */
 .slogan {
-    color: rgb(185, 181, 181);
+    color: #FFFFFF;
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -166,7 +186,28 @@ section {
     box-sizing: border-box;
     align-self: center;
 }
-/* Hero Section - Title & Logo */
+/* Give each section a consistent margin-top */
+section {
+    margin-top: 4rem; /* Adjust if you want more/less spacing between sections */
+  }
+  
+  /* Insert a line before each section, except the first, and position it halfway (2rem) above */
+  section + section::before {
+    content: "";
+    display: block;
+    width: 65px;              /* Line width */
+    height: 5px;             /* Line thickness */
+    background-color: #edefd9;
+    margin: -2rem auto 2rem auto;  
+    /* Explanation of the margins:
+       -2rem pulls the line 2rem up, so it's in the middle of the 4rem gap.
+        2rem auto adds 2rem space below the line, then auto-centers horizontally.
+    */
+    border-radius: 2px;      /* Slight rounding of line edges (optional) */
+  }
+  
+  
+/* =================== Hero Section - Title & Logo =================== */
 .hero-section {
     display: flex;
     flex-direction: row; /* Ensures the text and logo are on the same row */
@@ -204,6 +245,7 @@ section {
     margin-left: 20px; /* Space between the logo and the text */
     animation: bounce 2s ease-in-out infinite; /* Apply the bounce animation with smooth easing */
 }
+
 /* Bounce Animation */
 @keyframes bounce {
     0%, 100% {
@@ -212,20 +254,18 @@ section {
     50% {
         transform: translateY(-15px); /* Return to start position */
     }
-
 }
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .hero-section {
         flex-direction: column;
         text-align: center;
     }
-
     .hero-logo {
         max-width: 60%;
         margin-top: 20px;
     }
-
     .hero-text h1 {
         font-size: 4rem;
     }
@@ -235,7 +275,6 @@ section {
     .hero-text h1 {
         font-size: 3rem;
     }
-
     .hero-logo {
         max-width: 70%;
     }
@@ -258,17 +297,14 @@ h3, h4 {
         flex-direction: column;
         text-align: center;
     }
-
     .title-logo-section h1 {
         font-size: 5rem;
         max-width: 85vw;
     }
-
     .title-logo-section .logo {
         margin-left: 0;
         margin-top: 10px;
     }
-
     .navbar-logo {
         width: 100px;
     }
@@ -279,31 +315,25 @@ h3, h4 {
     .title-logo-section h1 {
         font-size: 4rem;
     }
-
     .title-logo-section .logo {
         width: 80px;
     }
-
     .slogan {
         font-size: 16px;
     }
-
     section {
         width: 95%;
         padding: 15px;
     }
-
-    nav {
+    .navbar {
         flex-direction: column;
         text-align: center;
     }
-
-    nav a {
+    .navbar-nav .nav-link {
         display: block;
         width: 100%;
         padding: 10px;
     }
-
     .navbar-logo {
         width: 80px;
     }
@@ -315,26 +345,22 @@ h3, h4 {
         font-size: 3rem;
         max-width: 80vw;
     }
-
     .slogan {
         font-size: 14px;
     }
-
     section {
         width: 98%;
         padding: 10px;
     }
-
     h2, h3, h4 {
         font-size: 1.2rem;
     }
-
     .navbar-logo {
         width: 60px;
     }
 }
 
-/* Video Section */
+/* =================== Video Section =================== */
 .video-section {
     text-align: center;
     margin: 50px auto;
@@ -346,7 +372,7 @@ h3, h4 {
     border-radius: 10px;
 }
 
-/* Team Section */
+/* =================== Team Section =================== */
 .team-section {
     text-align: center;
     margin: 50px auto;
@@ -408,7 +434,9 @@ h3, h4 {
     transform: scale(1.2);
 }
 
-.quote-section {
+/* =================== Quote Styling =================== */
+#abstract blockquote {
+    display: block;
     background-color: #181f34; /* Dark Blue Background */
     color: white;
     padding: 20px;
@@ -417,16 +445,12 @@ h3, h4 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Soft Shadow */
-}
-
-.quote-section blockquote {
     font-size: 1.5rem;
     font-style: italic;
     font-weight: bold;
-    margin: 0;
 }
 
-.quote-section span {
+#abstract blockquote span {
     display: block;
     margin-top: 10px;
     font-size: 1rem;
@@ -435,11 +459,18 @@ h3, h4 {
     color: #9eb7c6;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-top: 10px;
-}
+/* Move the features.png image down slightly */
+.features-img {
+    margin-top: 5rem; /* Adjust as needed for more/less space */
+  }
+  
+  /* Pull the next section up by reducing its default top margin */
+  .next-section {
+    margin-top: 5rem !important; /* This overrides .my-5 which is 3rem, for example */
+  }
+  
 
+/* =================== Social Icons =================== */
 .social-icons a {
     color: #181f34;
     font-size: 24px;
@@ -452,20 +483,18 @@ h3, h4 {
     transform: scale(1.2);
 }
 
-
-
-/* Gantt Chart */
+/* =================== Gantt Chart =================== */
 .project-management {
     text-align: center;
     margin: 50px auto;
 }
 
 .project-management img {
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1500px;
 }
 
-/* Footer section */
+/* =================== Footer Section =================== */
 footer {
     background-color: #181f34;
     color: white;
@@ -488,7 +517,7 @@ footer {
     color: #ff7f00; /* Optional hover color */
 }
 
-/* Footer logos styling */
+/* =================== Footer Logos Styling =================== */
 .footer-logos {
     margin-top: 20px;
     display: flex;
@@ -505,11 +534,3 @@ footer {
 .footer-logo:hover {
     opacity: 0.7; /* Optional hover effect */
 }
-
-/* General styling for the body and layout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-

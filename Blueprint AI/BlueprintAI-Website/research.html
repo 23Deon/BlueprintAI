@@ -1,39 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueprintAI - Research</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueprintAI - Research</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome (if needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
+  <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo/Brand -->
+        <a class="navbar-brand" href="index.html">
+          <img src="logoText.png" alt="BlueprintAI Logo" class="navbar-logo">
+        </a>
+        <!-- Toggle for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <header>
-        <nav>
-            <!-- Image Placeholder -->
-            <img src="logoText.png" alt="Logo Placeholder" class="navbar-logo">
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- Home Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="requirements.html">Requirements</a>
+            </li>
 
-            <!-- Navigation Links -->
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="ui-design.html">UI Design</a>
-                <a href="system-design.html">System Design</a>
-                <a href="implementation.html">Implementation</a>
-                <a href="testing.html">Testing</a>
-                <a href="evaluation.html">Evaluation</a>
-                <a href="appendices.html">Appendices</a>
-            </div>
-        </nav>
-    </header>
+            <!-- Research Link, marked as active -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active"
+                 href="research.html"
+                 id="researchDropdown"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                Research
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                <li><a class="dropdown-item" href="research.html#related-project-review">Related Project Review</a></li>
+                <li><a class="dropdown-item" href="research.html#technology-review">Technology Review</a></li>
+                <li><a class="dropdown-item" href="research.html#our-technical-decisions">Our Technical Decisions</a></li>
+                <li><a class="dropdown-item" href="research.html#references">References</a></li>
+              </ul>
+            </li>
 
-    <div class="container">
-        <h1 class="page-title">Research</h1>
-        <!-- The rest of the research page content goes here -->
+            <!-- Other nav links -->
+            <li class="nav-item">
+              <a class="nav-link" href="ui-design.html">UI Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="system-design.html">System Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="implementation.html">Implementation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testing.html">Testing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="evaluation.html">Evaluation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="appendices.html">Appendices</a>
+            </li>    
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Title/Intro -->
+    <h1 class="my-5">Research</h1>
+    <p>We investigated existing solutions, relevant technologies, and theoretical frameworks to inform the project’s direction.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container flex-grow-1">
+
+    <section id="related-project-review" class="mb-5">
+      <h2>Related Project Review</h2>
+      <p>Discuss similar projects or relevant literature here...</p>
+    </section>
+
+    <section id="technology-review" class="mb-5">
+      <h2>Technology Review</h2>
+      <p>Discuss the technology stack, comparisons, etc...</p>
+    </section>
+
+    <section id="our-technical-decisions" class="mb-5">
+      <h2>Our Technical Decisions</h2>
+      <p>Explain the rationale behind certain technical choices...</p>
+    </section>
+
+    <section id="references" class="mb-5">
+      <h2>References</h2>
+      <p>List of sources, citations, references...</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-auto">
+    <div class="footer-logos d-flex justify-content-center align-items-center">
+      <a href="https://www.ucl.ac.uk" target="_blank">
+        <img src="ucl.png" alt="UCL Logo" class="footer-logo">
+      </a>
+      <a href="https://www.microsoft.com" target="_blank">
+        <img src="microsoft.png" alt="Microsoft Logo" class="footer-logo">
+      </a>
+      <a href="https://github.com/YOUR_GITHUB" target="_blank">
+        <i class="fa-brands fa-square-github"></i>
+      </a>
     </div>
+  </footer>
 
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Optional custom scripts -->
+  <script src="script.js"></script>
 </body>
-
 </html>
