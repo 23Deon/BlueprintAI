@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <!-- Font Awesome (if needed) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
   <header>
     <!-- Navigation Bar -->
@@ -20,36 +22,26 @@
         <a class="navbar-brand" href="index.html">
           <img src="logoText.png" alt="BlueprintAI Logo" class="navbar-logo">
         </a>
-    
+
         <!-- Toggle button for mobile view -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <!-- Nav links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            
+
             <!-- Home Link -->
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-    
+
             <!-- Requirements Link, marked as active -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active"
-                 href="requirements.html"
-                 id="requirementsDropdown"
-                 role="button"
-                 data-bs-toggle="dropdown"
-                 aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="requirements.html" id="requirementsDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Requirements
               </a>
               <ul class="dropdown-menu" aria-labelledby="requirementsDropdown">
@@ -61,7 +53,7 @@
                 <li><a class="dropdown-item" href="requirements.html#moscow">MoSCoW Requirements</a></li>
               </ul>
             </li>
-    
+
             <!-- Remaining nav links -->
             <li class="nav-item">
               <a class="nav-link" href="research.html">Research</a>
@@ -83,9 +75,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="appendices.html">Appendices</a>
-            </li> 
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="blog.html">Blog</a>
             </li>
           </ul>
         </div>
@@ -100,17 +92,58 @@
     <!-- Sections inside the same container -->
     <section id="partner-intro" class="mb-5">
       <h2>Introduction</h2>
-      <p>Your Introduction content...</p>
+      <p>We are Team 21, developing Blueprint AI, a VSCode extension that integrates AI-driven frontend UI generation.
+        We aim to simplify and accelerate UI development by enabling users to generate and customise frontend layouts
+        directly within VSCode.
+        The project was inspired by the challenges faced by hackathon participants, developers, and project managers who
+        need a fast, efficient, and flexible way to create frontend UIs without extensive manual coding.
+      </p>
     </section>
-    
+
     <section id="project-goals" class="mb-5">
       <h2>Project Goals</h2>
-      <p>Your Project Goals content...</p>
+      <p>Blueprint AI aims to:
+        Provide seamless UI generation using screenshots, sketches, or text prompts.
+        Allow no-code UI editing, making design accessible to both developers and non-developers.
+        Enable user to chat with AI on making changes to frontend design
+        Integrate AI-driven suggestions for design improvements
+        Enable exportable frontend code in multiple languages and frameworks.
+        Ensure a smooth development workflow within VSCode.
+      </p>
     </section>
 
     <section id="req-gathering" class="mb-5">
       <h2>Requirement Gathering</h2>
-      <p>Details about requirement gathering...</p>
+      <p>How We Collected Requirements
+        We gathered requirements through:
+        User interviews with developers, UI designers, and project managers.
+        Market research on existing tools like Microsoft PowerApps, Wix and Visily.
+        Feedback from industry professionals to understand development pain points.
+        Technical feasibility studies on AI-driven layout generation.
+        3.2 Surveys and Analysis
+        We designed a survey targeting:
+        Developers who need rapid UI development.
+        Project managers aiming for efficient team workflows.
+        UI/UX designers looking for AI-assisted design suggestions.
+        The survey included:
+        Multiple-choice questions on preferred development tools.
+        Ranking-based questions on UI generation needs.
+        Open-ended questions for feature suggestions.
+        Key Findings:
+        The main reason why people use AI tools is to save time on repetitive tasks (66.7% of people identified speed as
+        being extremely important in frontend development process) and generate design ideas. With most people already
+        using AI tools to assist in programming.
+        We found that improved accuracy, better customisation freedom and integration with popular frameworks and
+        libraries were key requirements in an AI front-end development tool.
+
+        4. Personas
+        Persona 1: Landon (CS Student @ a Hackathon)
+        <img src="image.jpg" alt="Description of the image">
+
+        Persona 2: Emma (Project Manager)
+        <img src="image.jpg" alt="Description of the image">
+
+      </p>
     </section>
 
     <section id="personas" class="mb-5">
@@ -127,7 +160,7 @@
       <h2>MoSCoW Requirements</h2>
       <p>Your MoSCoW requirements content...</p>
       <p>Functional Requirements</p>
-        <p>Non-Functional Requirements</p>
+      <p>Non-Functional Requirements</p>
     </section>
   </main>
 
@@ -151,4 +184,5 @@
   <!-- Your Custom Script (if any) -->
   <script src="script.js"></script>
 </body>
+
 </html>
