@@ -435,7 +435,88 @@
         The final UI of Blueprint AI below is the result of these countless revisions.
       </p>
 
+      <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#wireframe1Modal">
+          Open interactive wireframe!
+        </button>
+      </div>
       
+      <div class="modal fade" id="wireframe1Modal" tabindex="-1" aria-labelledby="wireframe1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="wireframe1ModalLabel">Interactive Wireframe</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body position-relative">
+              <img id="wireframeImage" src="ui-design-assets/1.png" alt="Wireframe Home Page" class="img-fluid">
+              
+              <!-- Invisible clickable area with adjusted flag -->
+              <div id="clickableArea" style="position: absolute; top: 82%; left: 78%; transform: translateX(-50%); width: 160px; height: 40px;">
+                <button id="clickableButton" class="btn p-0" style="width: 100%; height: 100%; opacity: 0;" onclick="changeImage()"></button>
+                <div class="position-absolute" style="top: -45px; left: 55%; transform: translateX(-50%); white-space: nowrap;">
+                  <span class="badge bg-danger" style="font-size: 0.75rem;">Click here</span>
+                  <div style="width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid #dc3545; margin-left: auto; margin-right: auto;"></div>
+                </div>
+              </div>
+              
+              <!-- Start Over button (initially hidden) -->
+              <button id="startOverButton" class="btn btn-secondary" style="display: none; position: absolute; bottom: 20px; right: 20px;" onclick="resetImage()">Start Over</button>
+            </div>
+            
+            <script>
+              let currentImage = 1;
+              
+              function changeImage() {
+                const wireframeImage = document.getElementById('wireframeImage');
+                const clickableArea = document.getElementById('clickableArea');
+                const clickableButton = document.getElementById('clickableButton');
+                if (currentImage === 1) {
+                  wireframeImage.src = 'ui-design-assets/2.png';
+                  clickableArea.style.top = '85%';
+                  clickableArea.style.left = '90.5%';
+                  clickableButton.style.opacity = '1';
+                  clickableButton.style.borderRadius = '0%';
+                  clickableButton.style.width = '70px';
+                  clickableButton.style.height = '20px'; 
+                  currentImage = 2;
+                } else if (currentImage === 2) {
+                  wireframeImage.src = 'ui-design-assets/3.png';
+                  clickableArea.style.top = '84%';
+                  clickableArea.style.left = '4.8%';
+                  //clickableButton.style.backgroundColor = 'rgba(0, 123, 255, 0.5)';
+                  clickableButton.style.opacity = '1';
+                  clickableButton.style.borderRadius = '0%';
+                  clickableButton.style.width = '20px';
+                  clickableButton.style.height = '20px';
+                  document.querySelector('#clickableArea > div').style.left = '50%';
+                  currentImage = 3;
+                } else if (currentImage === 3) {
+                  wireframeImage.src = 'ui-design-assets/4.png';
+                  clickableArea.style.display = 'none'; // Hide the clickable area (button and flag)
+                  document.getElementById('startOverButton').style.display = 'block'; // Show the start over button
+                  currentImage = 4;
+                }
+              }
+              
+              function resetImage() {
+                const wireframeImage = document.getElementById('wireframeImage');
+                const clickableArea = document.getElementById('clickableArea');
+                const clickableButton = document.getElementById('clickableButton');
+                const startOverButton = document.getElementById('startOverButton');
+                currentImage = 1;
+                wireframeImage.src = 'ui-design-assets/1.png';
+                // Reset clickable area back to its initial properties
+                clickableArea.style.display = 'block';
+                clickableArea.style.top = '82%';
+                clickableArea.style.left = '78%';
+                clickableButton.style.width = '100%';
+                clickableButton.style.height = '100%';
+                clickableButton.style.opacity = '0';
+                startOverButton.style.display = 'none';
+              }
+            </script>
+
     </section>
 
     <section id="references" class="mb-5">
