@@ -89,16 +89,88 @@
     </nav>
     <!-- Page Title/Intro -->
     <h1 class="my-5">User Interface Design</h1>
-    <p>Outlines the front-end layout, design principles, and interactive prototypes ensuring an optimal user experience.</p>
+    <p>This section outlines the front-end layout, design principles, and interactive prototypes ensuring an optimal user experience.</p>
   </header>
 
   <!-- Main Content -->
   <main class="container flex-grow-1">
     <!-- Sections inside the same container -->
     <section id="design-principles" class="mb-5">
-      <h2>Design Principles</h2>
-      <p>Describe your main UI design principles here.</p>
+      <h2>UI Design Overview</h2>
+      <p>Given that our project is targeted to a wide range of users, from programmers to designers - 
+        all with different levels of experience; 
+        we had to design a UI that would cater to these different groups. 
+        A careful balance was considered to create a UI that allowed for 
+        experienced designers to have ample avenues to compose and customise but 
+        not inundate regular users with too many features. Similarly, the UI needed to 
+        be intuitive but at the same time, not compromise on the application’s capabilities. 
+        </p>
+
+      <p>
+        We referenced highly popular design products such as Wix and Canva, 
+        using Jakob Nielson’s 10 Usability Heuristics for UI Design to guide our design process [1].
+      </p>
     </section>
+
+    <section id="design-principles-subsection" class="mt-4">
+      <h2>Design Principles</h2>
+      <p>Canva’s editing studio affords an elegant UI design that fulfills many of Nielson’s Usability Heuristics. 
+        In particular, the side tab which contains all the editing features, from adding elements to text, is clearly 
+        and concisely nested on the left. This creates a functional, non-cluttered layout. Additionally, 
+        the structure that side tabs afford allows for Information Architecture (IA) to be practised. 
+        IA is an essential design principle that breaks down complicated and complex interfaces into logical, 
+        useful components that users can use to accomplish their tasks [2]. Furthermore, we took heavy cues 
+        from a well-researched Medium article detailing the essential features a side tab must have, especially
+        from its width and size - for space optimisation - and a quick search feature- for maximum efficiency and convenience [3].
+      </p>
+      <img src="ui-design-assets/canva_screenshot_1.svg" alt="Canva Screenshot 1" class="img-fluid custom-margin">
+
+      <section id="usability-heuristics" class="mt-4">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Design Feature</th>
+                <th>Usability Heuristic</th>
+                <th>Implementation into BlueprintAI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3">Customisation sidebar</td>
+                <td>Recognition rather than recall</td>
+                <td>All fields and labels are visible and labelled on the left of the UI 
+                  (adding elements, textboxes, etc). Makes it easy for the user to access.</td>
+              </tr>
+              <tr>
+                <td>Flexibility and efficiency of use</td>
+                <td>Users have many customisation and personalisation options as company 
+                  logos, drawings can be uploaded and stored in the sidebar for use.</td>
+              </tr>
+              <tr>
+                <td>Aesthetic and minimalist design</td>
+                <td>Each section in the sidebar displays only relevant information, 
+                  the sidebar is also portioned distinctly, ensuring key features are presented.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+        <p>
+          We also took direction from the top bars of Wix and Canva. 
+          These bars contained crucial project level information and essential functions 
+          needed for the user to save, publish, undo their work. The buttons were clearly 
+          labelled or had icons that were established and commonly recognised for users - 
+          which is highly effective in conveying important information to the user without 
+          taking up much space [4]. Additionally, on the top bar of the Wix page, the buttons 
+          to toggle between computer view and mobile phone view were ingeniously formatted - 
+          with this being a key feature of our project, we followed Wix’s stylish incorporation. 
+          This design was also incorporated into our sketches and eventually the final UI design of our project. 
+        </p>
+        <img src="ui-design-assets/canva_screenshot_2.svg" alt="Canva Screenshot 2" class="img-fluid custom-margin">
+      </main>
+    </section>
+  </section>
 
     <section id="sketches" class="mb-5">
       <h2>Sketches</h2>

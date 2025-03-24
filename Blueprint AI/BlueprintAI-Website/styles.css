@@ -286,7 +286,7 @@ h2 {
 }
 
 h3, h4 {
-    color: #ffffff;
+    color: #9eb7c6 !important;
 }
 
 /* =================== Responsive Design =================== */
@@ -534,3 +534,9 @@ footer {
 .footer-logo:hover {
     opacity: 0.7; /* Optional hover effect */
 }
+
+/* =================== Custom Margins for Images =================== */
+
+.custom-margin {
+    margin-bottom: 0;
+  }
