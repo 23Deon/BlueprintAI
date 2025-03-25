@@ -8,6 +8,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Your Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    table,
+    table th,
+    table td {
+      border: 3px solid #bec1c3 !important;
+    }
+    table th,
+    table td {
+      text-align: left !important;
+    }
+  </style>
   <!-- Font Awesome (if needed) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -98,7 +109,428 @@
 
     <section id="related-project-review" class="mb-5">
       <h2>Related Project Review</h2>
-      <p>Discuss similar projects or relevant literature here...</p>
+      <p>We reviewed several existing tools that share similarities with Blueprint AI:</p>
+
+      <h3>
+        <a href="#wixCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="wixCollapse" class="text-decoration-none">
+          Wix <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="wixCollapse">
+        <p>
+          Wix is a popular website builder that allows users to build all kinds of websites, 
+          ranging from personal blogs, company websites to storefronts. Website creation is done 
+          entirely through the editing studio, without the user needing to write code at all.  
+          Wix extends the website creation concept further by allowing users to host their websites 
+          on Wix’s domain, and review analytics such as viewer traffic. In 2016, Wix embarked on implementing 
+          AI for website design [1] and currently features AI tools that aid in section creation and text generation.
+        </p>
+  
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Our Evaluation</th>
+              <th>Include?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No code needed for designing</td>
+              <td>Allows for users to focus primarily on design and not worry about coding.</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Allow hosting websites on domain</td>
+              <td>Wix does not offer an exporting to code function, rather users host 
+                their websites on their domain. With the exporting feature of Blueprint AI 
+                into various GUI frameworks, this feature is counterintuitive as users would export
+                UI code to integrate with their own backend for greater control over publishing their product.</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>AI tools, multiple options generation</td>
+              <td>Wix's AI tools allow for text generation and also section creation.
+                This is highly versatile and useful. The AI also generates multiple design options 
+                for the user to choose from which is also very practical for the user.</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>
+        <a href="#powerPagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="powerPagesCollapse" class="text-decoration-none">
+          Microsoft Power Pages <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="powerPagesCollapse">
+        <p>
+          Microsoft PowerPages is a platform designed for rapid website development, offering a user-friendly drag-and-drop 
+          interface builder that enables users to create applications with ease. The platform leverages 
+          AI-assisted UI recommendations to enhance the design process. 
+          PowerPages seamlessly integrates with a variety of backend services such as its Dataverse 
+          storage capabilities, security authentication features and analytics functionalities [2]. 
+          One key feature of PowerPages that set it apart from more mainstream website creators is its ability to export the code in HTML, CSS and JavaScript, 
+          the user can then further edit the code [3].
+        </p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Our Evaluation</th>
+              <th>Include?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Backend services integration, security authentication</td>
+              <td>A useful feature that helps translate design into development and link front end to backend more easily. 
+                Takes the frontend development one step further. These features are locked behind a paywall 
+                and are subscription based - limiting the types of users who are willing and able to afford to use them.
+                Blueprint AI will be a free to use product for all users to use, with no tiered features </td>
+
+              <td>Partial inclusion in the form of exporting the code 
+                into GUI frameworks that allow for easier integration with backend.</td>
+            </tr>
+            <tr>
+              <td>Exporting of code.</td>
+              <td>Exporting is a standout feature that is important for website development. 
+                As for PowerPages, this feature is limited to exporting in HTML, CSS and JavaScript and 
+                is not integrated into an IDE, changes made on the IDE are not displayed on the 
+                PowerPages app and vice versa. This adds a layer of inconvenience that Blueprint AI aims to solve.</td>
+
+              <td>Yes. Aim to further increase exporting capabilities and VSCode integration for ease of use.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>
+        <a href="#figmaCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="figmaCollapse" class="text-decoration-none">
+          Figma <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="figmaCollapse">
+        <p>
+          Figma is a powerful web-based design tool known for its collaborative design interface. 
+          While Figma itself is not specifically tailored for frontend development like Blueprint AI, 
+          it offers robust UI design capabilities and can integrate with code-generation plugins.
+        </p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Our Evaluation</th>
+              <th>Include?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Collaborative Design Interface</td>
+              <td>Figma allows multiple users to design simultaneously, 
+                enhancing team collaboration. This is a standout feature for UI/UX teams.</td>
+
+              <td>Partial Inclusion — Potential for team collaboration features 
+                but simplified for Blueprint AI.</td>
+            </tr>
+
+            <tr>
+              <td>Prototyping and Animation</td>
+
+              <td>Figma allows for interactive prototypes and animated transitions directly in the tool.</td>
+
+              <td>No — This is better suited for design rather than code generation.</td>
+            </tr>
+
+            <tr>
+              <td>Code Export through Plugins</td>
+
+              <td>Figma supports third-party plugins that export designs into React, Flutter, or HTML/CSS code.</td>
+
+              <td>Yes — A similar feature for streamlined code export will be integrated in Blueprint AI.</td>
+            </tr>
+
+            <tr>
+              <td>Auto Layout</td>
+
+              <td>Auto Layout enables flexible design structures that adapt to content changes, improving design consistency.</td>
+
+              <td>Yes — This feature aligns well with Blueprint AI’s goal to generate adaptable UI designs.</td>
+            </tr>
+
+            <tr>
+              <td>AI-Powered Features</td>
+
+              <td>While Figma’s AI capabilities are still evolving, some plugins offer AI-assisted content generation.</td>
+
+              <td>Partial Inclusion — Blueprint AI’s AI will focus on complete frontend generation, including layout and design refinement.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>
+        <a href="#visilyCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="visilyCollapse" class="text-decoration-none">
+          Visily <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="visilyCollapse">
+        <p>
+          Visily is highly similar to other website builders like Wix but has much more capabilities and functionalities. 
+          Besides webpages, Visily can also create mobile phone pages, wireframes and mockups. The use of AI is also more prominent and 
+          wider in Visily as compared to Wix as Visily allows the user to upload screenshots of existing UI to kickstart the generation process, 
+          a welcomed feature from the usual description/ text based prompts that Wix offers. Visily supports multi-page generation and a
+          multi-page view as shown below which gives a more holistic view of the user’s design.
+        </p>
+
+        <img src="research-assets/visily_screenshot1.png" alt="Visily screenshot 1" class="img-fluid custom-margin" style="width: 100%;">
+        <p><br></p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Our Evaluation</th>
+              <th>Include?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Can create mobile pages</td>
+              <td>
+                 As there are more mobile phones than computers on this planet [4], the need for tailored mobile page
+                 front end design is apparent. Blueprint AI will thus need to include this feature so as to 
+                 increase its useability. 
+                </td>
+
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Use screenshots/ images as AI reference point</td>
+              <td>Screenshots are a quick and fantastic way to tell the AI exactly what you 
+                want generated as describing with text prompts can get too tedious and is 
+                also difficult to describe clearly to the AI.</td>
+
+              <td>Yes</td>
+            </tr>
+
+            <tr>
+              <td>Multi-page generation and editing</td>
+              <td>
+                Frontend development involves more than just one page, having AI and a studio that 
+                can view, edit and create multiple pages would be extremely useful in creating a 
+                cohesive and consistent frontend design for the user.
+                </td>
+
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>
+        <a href="#copilotCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="copilotCollapse" class="text-decoration-none">
+          Evaluating Microsoft Copilot v1.0 <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="copilotCollapse">
+        <p>
+          Our first project brief stated that we were to improve upon a project made by a group of 
+          UCL postgraduate students in 2024 for their IXN module titled Microsoft Copilot UI v1.0. 
+          The scope of this was largely similar to Blueprint AI, with the main feature of incorporating 
+          AI to generate, edit and export user interfaces all within a VSCode extension. 
+          Our initial brief wanted us to explore, using the existing codebase, other frameworks 
+          for exporting the frontend designs into frontend frameworks. <br><br>
+          The link to the entire repository can be found in [5], including a demo video of that project.
+        </p>
+
+        <p>
+          <strong>Overview of Microsoft Copilot UI v1.0</strong> <br><br>
+
+          Copilot UI v1.0 is a webview-based React editor integrated into a VSCode Extension, 
+          primarily written in Typescript. The main backend code, consisting of the main program 
+          logic (API calls, testing, JSON tree conversion) is located in the src directory while 
+          the frontend of v1.0 is found in the webview-ui directory.  The system architecture of 
+          v1.0 is shown in Figure 1, this is taken directly from the GitHub repository. The key 
+          features of the project and brief explanations are listed in the table below.
+        </p>
+
+        <img src="research-assets/v1_systemarchi.png" alt="Version 1 System Architecture" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u>Figure 1. Copilot UI v1.0 System Architecture </u></p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><strong>Key Feature</strong></th>
+              <th><strong>Explanation</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VSCode Extension Wrapper<br><br>
+
+                File reference:<br>
+                 .vscode
+                </td>
+              <td>
+                VSCode API interacts with the editor [6], workspace, and key storage. <br><br>
+
+                Entry point for users to interact with the system, such as opening the webview, saving/loading projects, and triggering AI generation.
+                </td>
+            </tr>
+            <tr>
+              <td>React Editor</td>
+              <td>Craft.js was used as a framework for building drag-and-drop page editors. <br><br>
+
+                FluentUI, Microsoft’s design system, was used for the editor's components like text boxes.<br><br>
+                
+                React Grid Layout was used to manage the layout of components within the editor, providing responsive and resizable grids.
+                </td>
+            </tr>
+            <tr>
+              <td>AI integration<br><br>
+
+                File references: <br><br>
+                src/generateImage <br>
+                src/generateLayout
+                </td>
+              <td>Azure, OpenAI GPT-4: Used for generating text layouts and processing natural language inputs such as the text prompts.<br><br>
+
+                DALL-E 3: Used for generating images based on user prompts or layout schemas like screenshots of websites.<br><br>
+                
+                <strong>Users input and use their own API keys.</strong>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                Generated Layout Node Tree<br><br>
+
+                File reference:<br>
+                src/generateLayout/buildNodeTree.ts
+              </td>
+              <td>
+                The system uses AI (e.g., GPT-4) to interpret the input and generate a corresponding layout node tree.<br><br>
+                JSON-based tree structure representing the arrangement and properties of components in a design is generated and displayed in the editor.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Exporting Frameworks<br><br>
+
+                File references:<br>
+                src/HTML
+                src/WinUI
+              </td>
+              <td>
+                HTML + CSS: Converts the JSON node tree into HTML and CSS for web use. <br><br>
+
+                WinUI: Converts the design into WinUI format compatible with Windows applications [7].
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-size: 1.5em;"><strong>Learning points</strong></p>
+        <p>
+          <u>1. Good system architecture</u><br><br>
+          The system architecture (Figure 1) is well-thought out and planned suitably to meet the requirements of the project. This gave us some semblance of structuring and organising such a complicated system.
+          The VSCode extension structure can be replicated and modeled for our version of the project as it relies on the existing, well-documented VSCode API library [6].
+          Figure 2 shows a code snippet taken from the file in: <u>src/generateLayout/generateLayout.ts</u> <br><br>
+          This file, along with other similar files found in the generateLayout directory was useful as 
+          it allowed us to adapt our project based on this similar structure of importing the AI API library 
+          and component types, making API calls to OpenAI. Furthermore, we can also improve on the meta prompts 
+          (Figure 2, line 10) beyond just safety and ethics, to use them to refine the generated node tree. 
+          Meta prompts are an excellent way of guiding large language models to perform complex tasks and reasoning 
+          in a more methodical and logical way [8]. Based on the research paper in [8], we can leverage the use of 
+          meta prompts to generate more refined and tailored results for the user.
+        </p>
+
+        <img src="research-assets/code_snippet1.png" alt="Code snippet 1" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u>Figure 2. Code snippet of generatedLayout.ts taken from v1.0</u></p>
+
+        <p>
+          <u>2. Choice of Frameworks</u><br><br>
+          The implementation of widely-used, industry relevant frameworks such as React and WinUI helped us to scope our research more clearly. 
+          This gave us a good sense of what we could start exploring and looking into without having to write our own components from scratch. 
+          This is discussed further in <strong>section 2: Technology Review.</strong><br><br>
+          This project was a useful example of the existing frameworks we can use, where v1.0 
+          highlights the ability to successfully implement such frameworks into our version - 
+          with the method of exporting to HTML + CSS and WinUI frameworks being evident with v1.0. 
+        </p>
+
+        <p>
+          <u>Conclusion</u><br><br>
+          Version 1.0 gave us a good starting point and provided enough direction and structure 
+          to aid us in our research and development process. It gave us confidence that programming
+           a system like this is feasible. In particular, the frameworks and design decisions made gave 
+           us a reference point and insight on how it could be implemented, especially the exporting of 
+           UI designs into various frontend frameworks and also structuring our output using data structures like node trees. 
+        </p>
+
+        <p style="font-size: 1.5em;"><strong>Pain points</strong></p>
+        <p><u>1. Complex Directory Structure</u></p>
+        <p>
+          While the system architecture design provided a clear high level overview of the system, 
+          the directory structure of v1.0 is complex and difficult to navigate. Several issues 
+          stood out which made understanding the system more challenging. <br><br>
+
+          There were multiple nested folders containing different functionalities, 
+          causing a bloated folder hierarchy. For instance, the tests (<strong>__tests__</strong>) 
+          were located in the backed folder (/src) and this folder included more folders containing different 
+          types of tests. A modular approach can be employed for our version, to reduce folder sprawl and improve 
+          organisation [9]; thereby enabling our system to be scalable and extendable.<br><br>
+
+          Additionally, several files included were obsolete and design decisions that were not 
+          made were left in the source code. This made the directory structure unnecessarily convoluted. 
+          It is evident that the group attempted to integrate some form of GitHub Copilot calls in the 
+          backend but was ultimately abandoned. While there was some explanation of what this feature 
+          could potentially be, the implementation was partially done with boilerplate code (Figure 3). 
+          As such, this code served no purpose but to make the source code files more complicated.
+        </p>
+
+        <img src="research-assets/code_snippet2.png" alt="Code snippet 2" class="img-fluid custom-margin" style="width: 100%;">
+        <p><br></p>
+        <img src="research-assets/code_snippet3.png" alt="Code snippet 3" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u> Figure 3. Abandoned code for integrating Copilot left in source code</u></p>
+
+        <p><u>2. Nested components and mixed UI logic</u></p>
+        <p>
+          Some crucial components of the code were written with nested components, incorporating mixed UI logic in the program. 
+          This poor programming practice made deciphering the program logic more tedious and also harder to maintain, scale and test. 
+          One main culprit is the <strong>MainWebviewPanel.ts</strong> program that manages a webview panel in the VSCode extension. 
+          This class is responsible for creating, displaying, and handling interactions with the webview panel, 
+          which is a vital component of the system - yet landed itself to the aforementioned faults. <br><br>
+
+          The <strong>_setWebviewMessageListener</strong> method in <strong>MainWebviewPanel.ts</strong> contains a large switch statement with
+          deeply nested logic for handling various commands (Figure 4). Each case in the switch statement performs 
+          complex operations, such as: Fetching API keys, Saving and loading files, Processing sketches and text 
+          descriptions, etc. This, among other issues, makes the method too long and complex, which reduces r
+          eadability and maintainability. <br><br>
+        </p>
+
+        <img src="research-assets/code_snippet4.png" alt="Code snippet 4" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u>Figure 4. Snippet of _setWebviewMesageListener method containing many switch statements</u></p>
+
+        <p style="font-size: 1.5em;"><strong>Verdict</strong></p>
+
+        <p>
+          While v1.0 provided a sufficient basis to scope our research and structure our project, 
+          some major issues such as the complex directory structure and complicated code logic made 
+          it difficult to extend v1.0. As such, we made the difficult but necessary decision to <strong>redo the system</strong> 
+          from scratch in our own way. Though this may seem like a poor decision in terms 
+          of time, redoing the system allowed us to overcome the issues v1.0 faced with the fundamental 
+          design of the system, thereby allowing us greater flexibility in implementing better, more robust 
+          features. With a more modular approach and design for our version, we can ensure greater maintainability,
+          reusability, scalability and abstraction. A version that emphasizes the SOLID principles [10] will 
+          greatly improve system architecture, allowing for future COMP0016 groups to extend our project with 
+          more ease than it took us to understand v1.0’s system.  
+        </p>
+
+      </div>
+      
     </section>
 
     <section id="technology-review" class="mb-5">
