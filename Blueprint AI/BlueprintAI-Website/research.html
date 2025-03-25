@@ -534,12 +534,91 @@
     </section>
 
     <section id="technology-review" class="mb-5">
-      <h2>Technology Review</h2>
-      <p>Discuss the technology stack, comparisons, etc...</p>
+        <h2>Technology Review</h2>
+
+      <h3>
+        <a href="#possibleSolnCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="possibleSolnCollapse" class="text-decoration-none">
+          Possible Solutions <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="possibleSolnCollapse">
+        <p>
+          For solutions to a system like Blueprint AI, we considered two aspects. 
+        </p>
+
+        <p><u>1. Presence of Coding</u></p>
+        <p>
+          This aspect refers to how much the user will need to code to get their frontend designs out and working, 
+          also taking into account a user’s programming skill level. The increasing prevalence of low-code/no-code 
+          products such as Wix and Microsoft PowerApps signals a shift in traditional software development workflow, 
+          reducing the barriers to entry for software development. This is greatly empowering for the average user as the 
+          technical skills needed are vastly reduced [11]. Furthermore, the estimated low-code/no-code market size was 
+          USD 6.78 billion in 2022, and is projected to grow significantly in the next decade [12].<br><br>
+
+          While a low-code/no-code design choice would make sense given the current market, this would limit the flexibility 
+          and control a user has when designing their frontend. The user would be limited to pre-designed components and structures, 
+          which is restrictive [13]. Additionally, employing a low-code/no-code design would not make our student-developed project 
+          standout against industry standard solutions like Wix and PowerApps which are already established. <br><br>
+
+          On the other hand, incorporating too many elements of coding required by the user would cater towards the more experienced 
+          developers and would be more time-consuming; a counter-intuitive design choice for Blueprint AI.<br><br>
+
+          With the intended users being those who require a quick, reliable way to scaffold and generate frontend designs - 
+          regardless of their know-how and technical expertise in frontend development, our approach would need to cater to this type of user. 
+          As such, an approach requiring more coding than conventional low-code/no-code platforms but at the same time not be a necessary 
+          component for the frontend generation. This comes in the form of the <strong>exporting feature</strong> where users can edit the exported code in the 
+          frontend framework they need, a welcomed feature over low-code/no-code platforms like Wix which lack an exporting feature. Users of all 
+          programming backgrounds would thus find that using Blueprint AI is valuable in terms of the time savings it affords and also the flexibility 
+          in editing the frontend code generated. Figure 5 depicts a general indication of where Blueprint AI falls in the spectrum of coding required by the user.
+        </p>
+
+        <img src="research-assets/diagram1.png" alt="Diagram 1" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u>Figure 5. Coding spectrum approach used for Blueprint AI</u></p>
+
+        <p><u>2. Prominence of AI </u></p>
+        <p>
+          Currently, popular industry solutions like Wix, Visily and PowerApps do feature AI tools to help generate frontend designs 
+          (as discussed under Section 1.1), but these AI tools are relegated to being an additional feature rather than being integrated 
+          throughout every aspect that the user interacts with when designing. We aim to get Blueprint AI to stand out from existing solutions 
+          through making AI more prominent; studies have shown that AI is extremely useful in expediting frontend development, thereby alleviating 
+          workloads through automation [14].<br><br>
+
+          In order to make AI more prominent, from the start, users are prompted to tell the AI what they want through text, 
+          image or both.  We also plan to include a chat bot for the user to interact with the AI by telling it what changes to make. 
+          This allows for prompts by the user that can be tailored to the users specific needs, enhancing the flexibility and control 
+          that the user has as well - beyond manually tweaking the frontend source code themselves. Additionally, the AI also recommends
+          different pages that the users need as frontend design requires multiple pages, on average 12-30 pages for a full-fledged website - 
+          according to [15].<br><br>
+
+          With this, at every step, AI is integrated seamlessly into the frontend development experience, 
+          streamlining the development process. With AI-driven UI generation, users are afforded efficiency and flexibility. 
+          Figure 6 depicts the continuous integration of AI in Blueprint AI.
+        </p>
+
+        <img src="research-assets/diagram2.png" alt="Diagram 2" class="img-fluid custom-margin" style="width: 100%;">
+        <p><u>Figure 6. Continuous integration of AI in Blueprint AI</u></p>
+      </div>
+
+      <h3>
+        <a href="#devicesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="devicesCollapse" class="text-decoration-none">
+          Devices <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="devicesCollapse">
+        One of the standout features of v1.0 was its integration as a VSCode extension. 
+        The sheer user base VSCode has, amounting to over 2.5 million active monthly users in 2017 [16] 
+        makes it an attractive choice to deploy Blueprint AI as a VSCode extension. The free-to-use 
+        IDE hosts over 4000 extensions [16] and has comprehensive documentation on how to deploy our project as an 
+        extension [6]. Thus, having Blueprint AI as a <strong>VSCode extension</strong> means it runs on any device that supports VSCode, 
+        removing hardware dependency concerns and allowing our project to reach a wide range of developers.
+      </div>
+
+    </section>
+      
     </section>
 
     <section id="our-technical-decisions" class="mb-5">
-      <h2>Our Technical Decisions</h2>
+      <h2>Summary of Technical Decisions</h2>
       <p>Explain the rationale behind certain technical choices...</p>
     </section>
 
