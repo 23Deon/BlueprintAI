@@ -613,13 +613,275 @@
         removing hardware dependency concerns and allowing our project to reach a wide range of developers.
       </div>
 
+      <h3>
+        <a href="#algorithmsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="algorithmsCollapse" class="text-decoration-none">
+          Algorithms <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="algorithmsCollapse">
+        <p>
+          For UI layout recognition, we needed software that could effectively and efficiently extract text 
+          description from given screenshots of websites. This text description would then be used to describe 
+          to the AI what kind of website the user wants to build. With this as a priority, we considered the following 
+          approaches: 
+        </p>
+
+        <p><u>1. Traditional Image Processing (OpenCV, cv2)</u></p>
+        <p>
+          OpenCV (Open Source Computer Vision Library) is a computer vision and machine learning software library. 
+          It is widely used for real-time image and video processing, and it provides a comprehensive set of tools 
+          for tasks like object detection, facial recognition, motion tracking, and more. Its cross platform 
+          capabilities and common programming language interfaces (C, C++, Python, Java) make it easier to develop with [17]. 
+        </p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><strong>Pros</strong></th>
+              <th><strong>Cons</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                No licensing cost, <br>
+                Extensive Documentation,<br>
+                Versatile as it supports a wide range of computer vision tasks.
+              </td>
+              <td>
+                Steep learning curve owing to wide range of advanced tools available 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          For Blueprint AI, there is simply no need for real-time image processing. This allowed us to narrow the search for 
+          libraries that related to text description extraction from an image, overcoming the need to pore through advanced 
+          libraries for heavy-duty image processing. Given that OpenCV is also widely used in industry, it made OpenCV a suitable choice.
+        </p>
+
+        <p><u>Deep learning based Optical Character Recognition (OCR):</u></p>
+        <p>
+          OCR is a technology that converts images (e.g., scanned documents, photos, or screenshots) into text that computers can read and edit . 
+          While OCRs can defer in the types of images they can extract from, the main function of an OCR is to allow computers to recognise and 
+          extract text from images. Some OCRs leverage AI and deep learning in the image processing and text detection and recognition front, 
+          allowing for more robust and impressive functionality [18]. This use of AI by OCR is inline with Blueprint AI’s central theme and 
+          abstract, as such, we researched on OCRs that specialised in extracting from screenshots that have deep learning capabilities.<br><br>
+
+          We narrowed our options down to two competing solutions: EasyOCR and Tesseract. Both are open-source systems which use AI for processing. 
+          The table below shows what each OCR can do.
+        </p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><strong>OCR</strong></th>
+              <th><strong>Description</strong></th>
+              <th><strong>Standout Features</strong></th>
+              <th><strong>Drawbacks</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>EasyOCR</strong>
+              </td>
+              <td>
+                Python based OCR which has support for over 80 languages.<br>
+                Built on Pytorch and easy to implement and use [19].<br>
+                Faster on GPU due to its deep learning-based architecture.
+              </td>
+              <td>
+                Provides higher accuracy for noisy, complicated images. This can be useful for complicated website layouts such as Chinese e-commerce platforms, 
+                which are known to be more intricate compared to Western counterparts [20].<br><br>
+                Handles multilingual text in a single image effectively
+
+              </td>
+              <td>
+                Limited fine-tuning options.
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Tesseract</strong>
+              </td>
+              <td>
+                PA traditional OCR engine developed in part by Google with comprehensive documentation found in [21].<br><br>
+                Optimized for CPU and generally faster on CPU.                
+              </td>
+              <td>
+                Highly customisable, supports custom training and fine tuning.<br><br>
+                Affords high accuracy with clean input.
+              </td>
+              <td>
+                Struggles with noisy or distorted text.<br><br>
+                Requires separate language data files for each language.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          We decided to use <strong>EasyOCR</strong>, with the primary reason being the ease of installation and implementation with Python 
+          and its simple API. Tesseract would require more set-up to get it running and implementation would be a bit more tedious. 
+          Additionally, while both OCRs would need some form of image pre-processing to be done before character recognition, EasyOCR 
+          requires less pre-processing. Lastly, while AI capabilities are an important factor for Blueprint AI, fine-tuning the OCR to 
+          produce the highest quality result is not a priority as we want our system to focus more on efficiency and speed for our users 
+          to rapidly scaffold their frontend development. <br><br>
+
+          In Blueprint AI, we use <strong>cv2 (OpenCV)</strong> to clean up images before running them through EasyOCR for text extraction. 
+          Think of cv2 as a tool that prepares the image—adjusting brightness, removing noise, and sharpening text—so it’s easier to read. 
+          This step is important because raw screenshots can be cluttered or blurry, making it harder for the OCR to recognize text accurately. 
+          Once the image is prepped, EasyOCR, a deep learning-based tool, quickly scans and extracts the text, even from complex website layouts. 
+          This setup helps us efficiently turn website screenshots into clear, structured descriptions that the AI can use to generate front-end designs.
+
+        </p>
+      </div>
+
+      <h3>
+        <a href="#programmingCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="programmingCollapse" class="text-decoration-none">
+          Programming Languages, Frameworks, Libraries, APIs <i class="fa fa-chevron-down"></i>
+        </a>
+      </h3>
+      <div class="collapse" id="programmingCollapse">
+        <p><u>1. Programming Languages and Frameworks</u></p>
+        <p>
+          We decided to continue the use of React, CraftJS and FluentUI from v1.0. 
+          React’s component-based architecture allows us to break down UI components 
+          into smaller, reusable pieces. This modularity is perfect for generating dynamic UIs, 
+          as components can be composed and reused across the application, ensuring ease of generating 
+          UIs dynamically based on user and AI input.<br><br>
+
+          CraftJS provides a drag-and-drop interface for building and editing UIs. 
+          This makes it easier for non-technical users or designers to create and modify 
+          layouts without writing code. Also, CraftJS integrates with React components which 
+          makes the system more cohesive.<br><br>
+
+          With these frameworks, we used Typescript instead of Javascript because the 
+          static typing of Typescript allowed for catching errors at compile time rather 
+          than runtime, easing the development and debugging process significantly. 
+          This also helps ensure the project remains scalable and maintainable as it 
+          grows as Typescript is better for organisation and refactoring.
+        </p>
+
+        <p><u>2. AI API</u></p>
+        <p>
+          For Blueprint AI’s backend, we leverage <strong>LangChain</strong> and <strong>Axios</strong> to streamline AI interactions
+          and data fetching. <strong>LangChain</strong> is a powerful framework designed to work with large language 
+          models (LLMs), making it easier to build AI-driven applications by managing prompt chaining, 
+          memory, and model selection. This allows Blueprint AI to create more dynamic and context-aware 
+          interactions when generating front-end designs. Meanwhile, <strong>Axios</strong>, a popular JavaScript library 
+          for making HTTP requests, ensures smooth and efficient communication with APIs, including OpenAI’s models. 
+          Its promise-based structure simplifies data handling, making API calls more reliable and easier to manage. 
+          Together, <strong>LangChain</strong> and <strong>Axios</strong> help optimize AI integration, ensuring a seamless and responsive user experience. <br><br>
+
+          We have also decided to stick with using OpenAI for the AI API. 
+          OpenAI contains many different models suitable for this project, 
+          such as DALLE, a generative AI model that creates images from text descriptions, 
+          allowing for image generation. OpenAI also boasts industry leading models that 
+          are highly advanced and intelligent, outperforming other competitors like Meta, 
+          Amazon and Microsoft [22]. With the impressive line-up of AI models, users also 
+          have more flexibility in managing their own tokens to manage their costs.  
+          Combined with the fact that OpenAI is also highly popular and widely used [23], and 
+          integrating OpenAI API calls into the backend is relatively straightforward, Blueprint AI 
+          will use OpenAI for its AI integration.
+        </p>
+      </div>
+
     </section>
       
     </section>
 
     <section id="our-technical-decisions" class="mb-5">
       <h2>Summary of Technical Decisions</h2>
-      <p>Explain the rationale behind certain technical choices...</p>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th><strong>Category</strong></th>
+            <th><strong>Final Choice</strong></th>
+            <th><strong>Reason</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Programming Frameworks</strong>
+            </td>
+            <td>
+              <strong>React (CraftJS, FluentUI, MaterialUI)</strong>
+            </td>
+            <td>
+              Best for component-based UI generation
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Programming Language</strong>
+            </td>
+            <td>
+              <strong>Typescript</strong>
+            </td>
+            <td>
+              Easier to catch errors, debug, refactor and extend
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Backend AI Integration</strong>
+            </td>
+            <td>
+              <strong>OpenAI, LangChain, Axios</strong>
+            </td>
+            <td>
+              Best Natural Language Processing capabilities
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Programming Frameworks</strong>
+            </td>
+            <td>
+              <strong>React (CraftJS, FluentUI, MaterialUI)</strong>
+            </td>
+            <td>
+              Best for component-based UI generation
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>OCR/Text Recognition</strong>
+            </td>
+            <td>
+              <strong>EasyOCR + cv2</strong>
+            </td>
+            <td>
+              Best for text extraction from screenshots.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Deployment Platform</strong>
+            </td>
+            <td>
+              <strong>VSCode</strong>
+            </td>
+            <td>
+              Developers work within VSCode, improving workflow, eliminating hardware dependencies
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
     </section>
 
     <section id="references" class="mb-5">
