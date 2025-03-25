@@ -11,7 +11,8 @@ body {
     flex-direction: column;
     text-align: center;
     overflow-x: hidden;
-    box-sizing: border-box; /* Ensures consistent sizing */
+    box-sizing: border-box;
+    /* Ensures consistent sizing */
 }
 
 /* =================== Smooth Page Transitions =================== */
@@ -35,6 +36,7 @@ body {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -81,10 +83,13 @@ header {
 .navbar-logo {
     position: absolute;
     top: 10px;
-    left: 0; /* Moves it fully to the left */
-    width: 150px; /* Increase size */
+    left: 0;
+    /* Moves it fully to the left */
+    width: 150px;
+    /* Increase size */
     height: auto;
-    max-width: 20vw; /* Adjust scaling */
+    max-width: 20vw;
+    /* Adjust scaling */
 }
 
 /* Existing nav link styling */
@@ -105,20 +110,26 @@ header {
 .navbar-nav .nav-link.active {
     color: #9eb7c6;
 }
+
 /* === Appendices Page Title & Subtitle === */
 /* 1) Target any H1 that has the .my-5 class. */
 h1.my-5 {
-    text-align: left;     /* Shift title to the left */
-    color: #9eb7c6;     /* Make title light blue */
-    font-weight: bold;    /* Make title bold */
-    margin-left: 25px; 
+    text-align: left;
+    /* Shift title to the left */
+    color: #9eb7c6;
+    /* Make title light blue */
+    font-weight: bold;
+    /* Make title bold */
+    margin-left: 25px;
 }
 
 /* 2) Target the paragraph immediately following that H1. */
-h1.my-5 + p {
-    text-align: left;     /* Shift subtitle to the left */
-    color: rgb(219, 222, 230);         /* Make subtitle text white */
-    margin-left: 25px; 
+h1.my-5+p {
+    text-align: left;
+    /* Shift subtitle to the left */
+    color: rgb(219, 222, 230);
+    /* Make subtitle text white */
+    margin-left: 25px;
     /* make text samller*/
     font-size: 1.5rem;
     font-weight: 400;
@@ -150,9 +161,11 @@ h1.my-5 + p {
 }
 
 .title-logo-section .logo {
-    width: 33%; /* Increase size */
+    width: 33%;
+    /* Increase size */
     height: 200px;
-    margin-left: 300px; /* Adjust left spacing */
+    margin-left: 300px;
+    /* Adjust left spacing */
 }
 
 /* =================== Slogan =================== */
@@ -186,33 +199,40 @@ section {
     box-sizing: border-box;
     align-self: center;
 }
+
 /* Give each section a consistent margin-top */
 section {
-    margin-top: 4rem; /* Adjust if you want more/less spacing between sections */
-  }
-  
-  /* Insert a line before each section, except the first, and position it halfway (2rem) above */
-  section + section::before {
+    margin-top: 4rem;
+    /* Adjust if you want more/less spacing between sections */
+}
+
+/* Insert a line before each section, except the first, and position it halfway (2rem) above */
+section+section::before {
     content: "";
     display: block;
-    width: 65px;              /* Line width */
-    height: 5px;             /* Line thickness */
+    width: 65px;
+    /* Line width */
+    height: 5px;
+    /* Line thickness */
     background-color: #edefd9;
-    margin: -2rem auto 2rem auto;  
+    margin: -2rem auto 2rem auto;
     /* Explanation of the margins:
        -2rem pulls the line 2rem up, so it's in the middle of the 4rem gap.
         2rem auto adds 2rem space below the line, then auto-centers horizontally.
     */
-    border-radius: 2px;      /* Slight rounding of line edges (optional) */
-  }
-  
-  
+    border-radius: 2px;
+    /* Slight rounding of line edges (optional) */
+}
+
+
 /* =================== Hero Section - Title & Logo =================== */
 .hero-section {
     display: flex;
-    flex-direction: row; /* Ensures the text and logo are on the same row */
+    flex-direction: row;
+    /* Ensures the text and logo are on the same row */
     align-items: center;
-    justify-content: center; /* Centers both the text and logo */
+    justify-content: center;
+    /* Centers both the text and logo */
     background-color: #181f34;
     color: white;
     padding: 50px;
@@ -226,33 +246,44 @@ section {
 .hero-text h1 {
     font-size: 6rem;
     margin: 0;
-    text-align: center;  /* Center the title */
+    text-align: center;
+    /* Center the title */
 }
 
 /* Slogan styling */
 .hero-text .slogan {
     font-size: 1.5rem;
     margin-top: 10px;
-    text-align: center; /* Ensure slogan is also centered */
+    text-align: center;
+    /* Ensure slogan is also centered */
 }
 
 /* Logo styling */
 .hero-logo {
-    width: 33%; /* 1/3 of the screen width */
-    max-width: 400px; /* Optional: Max limit for larger screens */
+    width: 33%;
+    /* 1/3 of the screen width */
+    max-width: 400px;
+    /* Optional: Max limit for larger screens */
     height: auto;
     object-fit: contain;
-    margin-left: 20px; /* Space between the logo and the text */
-    animation: bounce 2s ease-in-out infinite; /* Apply the bounce animation with smooth easing */
+    margin-left: 20px;
+    /* Space between the logo and the text */
+    animation: bounce 2s ease-in-out infinite;
+    /* Apply the bounce animation with smooth easing */
 }
 
 /* Bounce Animation */
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* Start and end position */
-    }   
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end position */
+    }
+
     50% {
-        transform: translateY(-15px); /* Return to start position */
+        transform: translateY(-15px);
+        /* Return to start position */
     }
 }
 
@@ -262,10 +293,12 @@ section {
         flex-direction: column;
         text-align: center;
     }
+
     .hero-logo {
         max-width: 60%;
         margin-top: 20px;
     }
+
     .hero-text h1 {
         font-size: 4rem;
     }
@@ -275,6 +308,7 @@ section {
     .hero-text h1 {
         font-size: 3rem;
     }
+
     .hero-logo {
         max-width: 70%;
     }
@@ -285,7 +319,8 @@ h2 {
     color: #9eb7c6;
 }
 
-h3, h4 {
+h3,
+h4 {
     color: #9eb7c6 !important;
 }
 
@@ -297,14 +332,17 @@ h3, h4 {
         flex-direction: column;
         text-align: center;
     }
+
     .title-logo-section h1 {
         font-size: 5rem;
         max-width: 85vw;
     }
+
     .title-logo-section .logo {
         margin-left: 0;
         margin-top: 10px;
     }
+
     .navbar-logo {
         width: 100px;
     }
@@ -315,25 +353,31 @@ h3, h4 {
     .title-logo-section h1 {
         font-size: 4rem;
     }
+
     .title-logo-section .logo {
         width: 80px;
     }
+
     .slogan {
         font-size: 16px;
     }
+
     section {
         width: 95%;
         padding: 15px;
     }
+
     .navbar {
         flex-direction: column;
         text-align: center;
     }
+
     .navbar-nav .nav-link {
         display: block;
         width: 100%;
         padding: 10px;
     }
+
     .navbar-logo {
         width: 80px;
     }
@@ -345,16 +389,22 @@ h3, h4 {
         font-size: 3rem;
         max-width: 80vw;
     }
+
     .slogan {
         font-size: 14px;
     }
+
     section {
         width: 98%;
         padding: 10px;
     }
-    h2, h3, h4 {
+
+    h2,
+    h3,
+    h4 {
         font-size: 1.2rem;
     }
+
     .navbar-logo {
         width: 60px;
     }
@@ -437,14 +487,16 @@ h3, h4 {
 /* =================== Quote Styling =================== */
 #abstract blockquote {
     display: block;
-    background-color: #181f34; /* Dark Blue Background */
+    background-color: #181f34;
+    /* Dark Blue Background */
     color: white;
     padding: 20px;
     margin: 40px auto;
     max-width: 800px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Soft Shadow */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    /* Soft Shadow */
     font-size: 1.5rem;
     font-style: italic;
     font-weight: bold;
@@ -461,14 +513,16 @@ h3, h4 {
 
 /* Move the features.png image down slightly */
 .features-img {
-    margin-top: 5rem; /* Adjust as needed for more/less space */
-  }
-  
-  /* Pull the next section up by reducing its default top margin */
-  .next-section {
-    margin-top: 5rem !important; /* This overrides .my-5 which is 3rem, for example */
-  }
-  
+    margin-top: 5rem;
+    /* Adjust as needed for more/less space */
+}
+
+/* Pull the next section up by reducing its default top margin */
+.next-section {
+    margin-top: 5rem !important;
+    /* This overrides .my-5 which is 3rem, for example */
+}
+
 
 /* =================== Social Icons =================== */
 .social-icons a {
@@ -479,7 +533,8 @@ h3, h4 {
 }
 
 .social-icons a:hover {
-    color: #0073b1; /* LinkedIn blue */
+    color: #0073b1;
+    /* LinkedIn blue */
     transform: scale(1.2);
 }
 
@@ -514,7 +569,8 @@ footer {
 }
 
 .social-links a:hover {
-    color: #ff7f00; /* Optional hover color */
+    color: #ff7f00;
+    /* Optional hover color */
 }
 
 /* =================== Footer Logos Styling =================== */
@@ -522,21 +578,96 @@ footer {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between the logos */
+    gap: 30px;
+    /* Space between the logos */
 }
 
 .footer-logo {
-    width: 100px; /* Set width for logos */
+    width: 100px;
+    /* Set width for logos */
     height: auto;
     object-fit: contain;
 }
 
 .footer-logo:hover {
-    opacity: 0.7; /* Optional hover effect */
+    opacity: 0.7;
+    /* Optional hover effect */
 }
 
 /* =================== Custom Margins for Images =================== */
 
 .custom-margin {
     margin-bottom: 0;
-  }
+}
+
+/* Style the tables within the #use-cases section to fit 60% of the page */
+/* Container grid styling to display two use cases per row,
+   with the overall container set to 80% width and centered on the page */
+#use-cases .use-cases-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Optional styling for each use case container */
+#use-cases .use-case {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling within each use case */
+#use-cases .use-case table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Table header and cell styling */
+#use-cases .use-case table th,
+#use-cases .use-case table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Table header background */
+#use-cases .use-case table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+/* Even row background color */
+#use-cases .use-case table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+
+/* Style for the persona container to display personas side by side and take 90% of the page width */
+/* Style for the persona container to display personas side by side and take 90% of the page width */
+#personas .persona-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Center align text within each persona block */
+#personas .persona {
+    text-align: center;
+    flex: 1;
+}
+
+/* Ensure the images scale within their container */
+#personas .persona img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

@@ -136,24 +136,244 @@
         We found that improved accuracy, better customisation freedom and integration with popular frameworks and
         libraries were key requirements in an AI front-end development tool.
 
-        4. Personas
-        Persona 1: Landon (CS Student @ a Hackathon)
-        <img src="image.jpg" alt="Description of the image">
 
-        Persona 2: Emma (Project Manager)
-        <img src="image.jpg" alt="Description of the image">
 
       </p>
     </section>
 
     <section id="personas" class="mb-5">
       <h2>Personas</h2>
-      <p>Details on personas...</p>
+      <div class="persona-container">
+        <div class="persona">
+          <p>Persona 1: Landon (CS Student @ a Hackathon)</p>
+          <img src="Persona 1.png" alt="Landon">
+        </div>
+        <div class="persona">
+          <p>Persona 2: Emma (Project Manager)</p>
+          <img src="Persona 2.png" alt="Emma">
+        </div>
+      </div>
     </section>
 
     <section id="use-cases" class="mb-5">
+
       <h2>Use Cases</h2>
-      <p>Your use cases content...</p>
+
+      <div class="use-cases-container">
+
+        <div class="use-case">
+
+          <h2>UC-01: Add API Key</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-01</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>Add API Key</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>User adds their OpenAI API key for AI calls.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. System prompts the user to enter an API key.<br>
+                2. User enters their OpenAI API key.<br>
+                3. System validates the key.<br>
+                4. If valid, system stores the key for future AI interactions.<br>
+                5. System confirms successful API key addition.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>API key successfully added, enabling AI functionalities.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="use-case">
+          <h2>UC-02: Screenshot-to-UI</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-02</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>Screenshot-to-UI</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>User uploads a screenshot, AI generates a UI layout.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. User selects the "Upload Screenshot" option.<br>
+                2. User uploads a UI screenshot.<br>
+                3. AI analyzes the image and extracts UI components.<br>
+                4. AI generates a structured UI layout.<br>
+                5. System displays the generated UI for review.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>The UI layout is successfully generated and ready for further editing or export.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="use-case">
+          <h2>UC-03: Text-to-UI</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-03</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>Text-to-UI</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>User describes UI in text, AI creates layout.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. User selects the "Text-to-UI" option.<br>
+                2. User enters a text description of the UI.<br>
+                3. AI processes the text and generates a UI layout.<br>
+                4. System displays the layout for user review.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>The UI layout is successfully created based on the user's text description.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="use-case">
+          <h2>UC-04: Asking AI to Make Edits</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-04</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>Asking AI to Make Edits</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>User modifies UI components using AI.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. User selects an AI-assisted editing option.<br>
+                2. User provides instructions (e.g., "Change button color to blue").<br>
+                3. AI processes the request and shows the user the updated UI.<br>
+                4. User validates the changes by clicking ‘Accept’ or ‘Reject’.<br>
+                5. System displays the modified UI accordingly.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>UI modifications are successfully applied based on user instructions.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="use-case">
+          <h2>UC-05: Manual Edits</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-05</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>Manual Edits</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>Taking control of the edits manually.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. User selects UI components.<br>
+                2. User makes manual changes (e.g., resizing, repositioning, modifying styles).<br>
+                3. System applies the changes.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>The UI components are successfully modified by the user.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="use-case">
+          <h2>UC-06: UI Export</h2>
+          <table>
+            <tr>
+              <th>Use Case ID</th>
+              <td>UC-06</td>
+            </tr>
+            <tr>
+              <th>Use Case Name</th>
+              <td>UI Export</td>
+            </tr>
+            <tr>
+              <th>Actor(s)</th>
+              <td>User</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>User exports generated UI as frontend code.</td>
+            </tr>
+            <tr>
+              <th>Basic Flow</th>
+              <td>
+                1. User selects the "Export UI" option.<br>
+                2. System presents export format choices (React, HTML, etc.).<br>
+                3. User selects the preferred format.<br>
+                4. System generates and downloads the UI code.
+              </td>
+            </tr>
+            <tr>
+              <th>Result</th>
+              <td>The UI is successfully exported in the selected frontend framework.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </section>
 
     <section id="moscow" class="mb-5">
