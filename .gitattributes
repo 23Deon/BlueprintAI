@@ -1,0 +1,40 @@
+# Default to portable text detection, then pin reviewed formats explicitly.
+* text=auto
+
+# Repository metadata and source/configuration text use LF.
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.svg text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.sh text eol=lf
+
+# Native Windows command scripts retain CRLF when introduced.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Media, fonts, archives, and Finder metadata are binary.
+.DS_Store -text
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.webp -text
+*.ico -text
+*.pdf -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.otf -text
+*.zip -text
+*.7z -text
+*.gz -text
+*.tar -text
